@@ -2,19 +2,18 @@
 
 import React from 'react';
 
-const FollowUserButton = props => {
-  //If the logged in user owns the profile, don't show anything.
-  if (props.isUser) {
+const FollowUserButton = ({ currentUser, profile, unfollow, follow }) => {
+  if (!currentUser || profile.username === currentUser.username) {
     return null;
   }
 
   //Determines which action creator to trigger.
   const handleClick = ev => {
     ev.preventDefault();
-    if (props.user.following) {
-      props.unfollow(props.user.username);
+    if (profile.following) {
+      unfollow(profile.username);
     } else {
-      props.follow(props.user.username);
+      follow(profile.username);
     }
   };
 
@@ -23,7 +22,7 @@ const FollowUserButton = props => {
       <i className="ion-plus-round" />
       &nbsp;
       {/* If the user is following the profile, then display Unfollow, otherwise display follow */}
-      {props.user.following ? 'Unfollow' : 'Follow'} {props.user.username}
+      {profile.following ? 'Unfollow' : 'Follow'} {profile.username}
     </button>
   );
 };

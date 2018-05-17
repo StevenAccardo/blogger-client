@@ -3,9 +3,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EditProfileSettings = ({ isUser }) => {
+const EditProfileSettings = ({ currentUser, profile }) => {
   //Checks to see if the profile belongs to the logged in user
-  if (isUser) {
+  if (currentUser && profile.username === currentUser.username) {
     return (
       <Link to="/settings" className="edit-profile-button btn btn-sm btn-outline">
         <i className="ion-gear-a" /> Edit Profile Settings

@@ -52,13 +52,11 @@ class Profile extends Component {
 
   render() {
     const profile = this.props.profile;
+    const currentUser = this.props.currentUser;
     //Don't render if there is no profile data.
     if (!profile) {
       return null;
     }
-
-    //Checks to see if the profile being viewed is the user's profile
-    const isUser = this.props.currentUser && this.props.profile.username === this.props.currentUser.username;
 
     return (
       <div className="profile-page">
@@ -70,9 +68,9 @@ class Profile extends Component {
                 <h4>{profile.username}</h4>
                 <p>{profile.bio}</p>
                 {/* Determines if the user should see edit options, or not. */}
-                <EditProfileSettings isUser={isUser} />
+                <EditProfileSettings currentUser={currentUser} profile={profile} />
                 {/* Determines if the follow or unfollow button should be rendered. */}
-                <FollowUserButton isUser={isUser} user={profile} follow={this.props.onFollow} unfollow={this.props.onUnfollow} />
+                <FollowUserButton currentUser={currentUser} profile={profile} follow={this.props.onFollow} unfollow={this.props.onUnfollow} />
               </div>
             </div>
           </div>
