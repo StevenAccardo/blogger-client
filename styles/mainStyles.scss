@@ -1,17 +1,18 @@
 /* ########################## main style start ########################################*/
 
-/* colors
+// import boostrap.scss
 
-#e27d60 - red orange
-#78c7c2 - Light teal
-#e8a87c - light orange
-#c38d9e - salmon
-#41b3a3 - dark teal */
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+$red-orange: #e27d60;
+$light-orange: #e8a87c;
+$dark-teal: #41b3a3;
+$light-teal: #78c7c2;
 
 body {
   font-family: 'comic sans ms', courier, verdana, impact;
   color: white;
-  background-color: #78c7c2;
+  background-color: $light-teal;
 }
 
 .article-preview {
@@ -24,7 +25,7 @@ a.author {
 }
 
 a.author:hover {
-  color: #e8a87c;
+  color: $light-orange;
   text-decoration: none;
 }
 
@@ -39,7 +40,7 @@ a.author:hover {
 .article-preview a.preview-link h1:hover,
 .article-preview a.preview-link p:hover,
 .article-preview a.preview-link span:hover {
-  color: #e8a87c;
+  color: $light-orange;
 }
 
 .article-preview .preview-link h1 {
@@ -83,24 +84,24 @@ a.author:hover {
 }
 
 .favorited {
-  background-color: #e8a87c;
+  background-color: $light-orange;
   color: #fff;
-  border-color: #e27d60;
+  border-color: $red-orange;
 }
 
 .favorited:hover {
-  border-color: #e27d60;
-  color: #e27d60;
+  border-color: $red-orange;
+  color: $red-orange;
   background-color: #fff;
 }
 
 .not-favorited {
-  border-color: #e27d60;
-  color: #e27d60;
+  border-color: $red-orange;
+  color: $red-orange;
 }
 
 .not-favorited:hover {
-  background-color: #e8a87c;
+  background-color: $light-orange;
   color: #fff;
 }
 
@@ -113,16 +114,16 @@ a.author:hover {
 .editor-page textarea.form-control,
 .editor-page input.form-control::placeholder,
 .editor-page textarea.form-control::placeholder {
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .editor-page .editor-button {
   color: #fff;
-  background-color: #e8a87c;
+  background-color: $light-orange;
 }
 
 .editor-page .editor-button:hover {
-  color: #e8a87c;
+  color: $light-orange;
   background-color: #fff;
 }
 
@@ -136,16 +137,16 @@ a.author:hover {
 .settings-page textarea.form-control,
 .settings-page input.form-control::placeholder,
 .settings-page textarea.form-control::placeholder {
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .settings-page .settings-button {
   color: #fff;
-  background-color: #e8a87c;
+  background-color: $light-orange;
 }
 
 .settings-page .settings-button:hover {
-  color: #e8a87c;
+  color: $light-orange;
   background-color: #fff;
 }
 
@@ -156,31 +157,31 @@ a.author:hover {
 }
 .settings-page .logout-button:hover {
   background-color: #fff;
-  color: #e8a87c;
-  border-color: #e8a87c;
+  color: $light-orange;
+  border-color: $light-orange;
 }
 
 .auth-page input.form-control,
 .auth-page input.form-control::placeholder {
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .auth-page a {
-  color: #e8a87c;
+  color: $light-orange;
 }
 
 .auth-page a:hover {
-  color: #e27d60;
+  color: $red-orange;
   text-decoration: none;
 }
 
 .auth-page button {
   color: #fff;
-  background-color: #e8a87c;
+  background-color: $light-orange;
 }
 
 .auth-page button:hover {
-  color: #e8a87c;
+  color: $light-orange;
   background-color: #fff;
 }
 /* ########################## header style start ########################################*/
@@ -190,7 +191,7 @@ nav.navbar a {
 }
 
 nav.navbar a:hover {
-  color: #e8a87c;
+  color: $light-orange;
 }
 
 .navbar-brand {
@@ -214,7 +215,7 @@ nav.navbar a:hover {
 
 .article-page .banner {
   padding: 2rem 0;
-  background-color: #e27d60;
+  background-color: $red-orange;
 }
 
 .article-page .banner h1 {
@@ -265,8 +266,8 @@ nav.navbar a:hover {
 
 .article-meta .edit-button:hover,
 .article-meta .delete-button:hover {
-  color: #78c7c2;
-  border-color: #78c7c2;
+  color: $light-teal;
+  border-color: $light-teal;
   background-color: #fff;
 }
 
@@ -281,18 +282,18 @@ nav.navbar a:hover {
 .article-page .comment-form .card-block textarea {
   border: 0;
   padding: 1.25rem;
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .article-page .comment-form .card-block textarea::placeholder {
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .article-page .comment-form .card-footer .btn {
   font-weight: 700;
   float: right;
-  background-color: #e8a87c;
-  border-color: #e8a87c;
+  background-color: $light-orange;
+  border-color: $light-orange;
 }
 
 .article-page .comment-form .card-footer .comment-author-img {
@@ -313,15 +314,15 @@ nav.navbar a:hover {
 }
 
 .comment {
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .comment a {
-  color: #e8a87c;
+  color: $light-orange;
 }
 
 .comment a:hover {
-  color: #e27d60;
+  color: $red-orange;
   text-decoration: none;
 }
 
@@ -396,11 +397,11 @@ nav.navbar a:hover {
 }
 
 .no-auth-comment-view a {
-  color: #e8a87c;
+  color: $light-orange;
 }
 
 .no-auth-comment-view a:hover {
-  color: #e27d60;
+  color: $red-orange;
   text-decoration: none;
 }
 
@@ -425,8 +426,8 @@ nav.navbar a:hover {
   z-index: 2;
   color: #fff;
   cursor: default;
-  background-color: #e8a87c;
-  border-color: #e8a87c;
+  background-color: $light-orange;
+  border-color: $light-orange;
 }
 
 .page-link {
@@ -434,17 +435,17 @@ nav.navbar a:hover {
   float: left;
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
-  color: #e8a87c;
+  color: $light-orange;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #e8a87c;
+  border: 1px solid $light-orange;
 }
 
 .page-link:focus,
 .page-link:hover {
   color: #fff;
-  background-color: #e8a87c;
-  border-color: #e8a87c;
+  background-color: $light-orange;
+  border-color: $light-orange;
 }
 
 .pagination {
@@ -489,7 +490,7 @@ nav.navbar a:hover {
 
 .profile-page .user-info {
   text-align: center;
-  background: #e27d60;
+  background: $red-orange;
   padding: 2rem 0 1rem;
 }
 
@@ -520,8 +521,8 @@ nav.navbar a:hover {
 
 .profile-page .user-info .follow-button:hover,
 .profile-page .user-info .edit-profile-button:hover {
-  border-color: #78c7c2;
-  color: #78c7c2;
+  border-color: $light-teal;
+  color: $light-teal;
   background-color: #fff;
 }
 
@@ -532,7 +533,7 @@ nav.navbar a:hover {
 /* ########################## home style start ########################################*/
 
 .home-page .banner {
-  background: #e27d60;
+  background: $red-orange;
   box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.3), inset 0 -8px 8px -8px rgba(0, 0, 0, 0.3);
 }
 
@@ -581,7 +582,7 @@ nav.navbar a:hover {
 
 .home-page .sidebar {
   padding: 5px 10px 10px;
-  background: #e27d60;
+  background: $red-orange;
   border-radius: 4px;
 }
 
@@ -603,12 +604,12 @@ nav.navbar a:hover {
 }
 
 .nav-pills.outline-active .nav-link:hover {
-  border: solid 1px #e27d60;
+  border: solid 1px $red-orange;
   border-bottom: 1px solid #fff;
 }
 
 .nav-pills.outline-active .nav-link.active {
-  background: #e27d60 !important;
+  background: $red-orange !important;
   border-bottom: 1px solid #fff !important;
   color: #fff !important;
 }
@@ -624,12 +625,12 @@ ul.tag-list li {
 }
 
 .tag-default {
-  background-color: #e8a87c;
+  background-color: $light-orange;
 }
 
 .tag-default[href]:focus,
 .tag-default[href]:hover {
-  color: #e27d60;
+  color: $red-orange;
 }
 
 .tag-default {
