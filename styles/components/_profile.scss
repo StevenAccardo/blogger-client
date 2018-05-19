@@ -1,0 +1,58 @@
+.profilePage__userInfo {
+  text-align: center;
+  background: $red-orange;
+  padding: 2rem 0 1rem;
+}
+
+.profilePage__userInfo__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.profilePage__userInfo__username {
+  font-weight: 700;
+}
+
+.profilePage__userInfo__bio {
+  margin: 0 auto 0.5rem;
+  max-width: 450px;
+  font-weight: 300;
+}
+
+.profilePage__userInfo__followButton,
+.profilePage__userInfo__editButton {
+  float: right;
+  border-color: $white;
+  color: $white;
+  background-color: transparent;
+}
+
+.profilePage__userInfo__followButton:hover,
+.profilePage__userInfo__editButton:hover {
+  border-color: $light-teal;
+  color: $light-teal;
+  background-color: $white;
+}
+
+.profilePage .articles-toggle {
+  margin: 1.5rem 0 -1px;
+}
+
+@media (max-width: 767px) {
+  .profilePage__userInfo__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .profilePage__userInfo__username {
+    font-size: 1.5rem;
+  }
+
+  .profilePage__userInfo__bio {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,31 @@
+.editorForm__button {
+  color: $white;
+  background-color: $light-orange;
+}
+
+.editorForm__input,
+.editorForm__textarea,
+.editorForm__input::placeholder,
+.editorForm__textarea::placeholder,
+.editorForm__input:focus,
+.editorForm__textarea:focus {
+  color: $red-orange;
+}
+
+.editorForm__button:hover {
+  transition: 0.5s all;
+  color: $light-orange;
+  background-color: $white;
+}
+
+.editorForm__tagList__icon {
+  font-size: 0.6rem;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+@media (orientation: landscape) {
+  .editorPage {
+    margin-bottom: 1rem;
+  }
+}

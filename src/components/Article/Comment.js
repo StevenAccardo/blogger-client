@@ -9,18 +9,18 @@ const Comment = ({ comment, currentUser, slug }) => {
   const show = currentUser && currentUser.username === comment.author.username;
   return (
     <div className="card mb-3 comment">
-      <div className="card-block">
-        <p className="card-text p-4">{comment.body}</p>
+      <div className="comment__card-block card-block">
+        <p className="comment__card-text card-text p-4">{comment.body}</p>
       </div>
-      <div className="card-footer">
-        <Link to={`/@${comment.author.username}`} className="comment-author">
-          <img src={comment.author.image} className="comment-author-img" alt="" />
+      <div className="comment__card-footer card-footer">
+        <Link to={`/@${comment.author.username}`}>
+          <img src={comment.author.image} className="comment__card-footer__avatar" alt="" />
         </Link>
         &nbsp;
-        <Link to={`/@${comment.author.username}`} className="comment-author">
+        <Link to={`/@${comment.author.username}`} className="comment__card-footer__author">
           {comment.author.username}
         </Link>
-        <span className="date-posted">{new Date(comment.createdAt).toDateString()}</span>
+        <span className="comment__card-footer__date">{new Date(comment.createdAt).toDateString()}</span>
         <DeleteButton show={show} slug={slug} commentId={comment.id} />
       </div>
     </div>

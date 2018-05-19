@@ -1,0 +1,30 @@
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: $white;
+}
+
+.navbar-brand:hover {
+  color: $light-orange;
+}
+
+.nav-item__user-pic {
+  height: 26px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 5px;
+}
+
+.nav-item__nav-link {
+  color: $white;
+}
+
+.nav-item__nav-link:hover {
+  color: $light-orange;
+}
+
+@media (max-width: 767px) {
+  .navbar-toggler-icon {
+    color: $white !important;
+  }
+}

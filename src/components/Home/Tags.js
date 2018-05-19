@@ -7,7 +7,7 @@ const Tags = ({ tags, onClickTag }) => {
   //If the tags were fetched successfully on the homepage render
   if (tags) {
     return (
-      <div className="tag-list">
+      <div className="sidebar__tagList">
         {tags.map(tag => {
           const handleClick = ev => {
             ev.preventDefault();
@@ -16,7 +16,7 @@ const Tags = ({ tags, onClickTag }) => {
           };
           //Renders each tag
           return (
-            <a href="" className="tag-default tag-pill" key={tag} onClick={handleClick}>
+            <a href="" className="tag tag--orange" key={tag} onClick={handleClick}>
               {tag}
             </a>
           );

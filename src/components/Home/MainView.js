@@ -13,8 +13,8 @@ const MainView = props => {
   const onSetPage = page => props.onSetPage(props.tab, page);
   return (
     <div className="col-md-9">
-      <div className="feed-toggle">
-        <ul className="nav nav-pills outline-active">
+      <div className="feedToggle">
+        <ul className="nav nav-pills">
           <YourFeedTab token={props.token} tab={props.tab} onTabClick={props.onTabClick} />
 
           <GlobalFeedTab tab={props.tab} onTabClick={props.onTabClick} />

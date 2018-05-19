@@ -8,31 +8,37 @@ import ListErrors from '../ListErrors';
 
 const CommentContainer = props => {
   //If a user is logged in.
-  if (props.currentUser) {
-    return (
-      <div className="col-xs-12 col-md-8 offset-md-2 mb-5">
+
+  const checkAuth = () => {
+    if (props.currentUser) {
+      return (
         <div>
           <ListErrors errors={props.errors} />
           <CommentInput slug={props.slug} currentUser={props.currentUser} />
         </div>
-
-        <CommentList comments={props.comments} slug={props.slug} currentUser={props.currentUser} />
-      </div>
-    );
-  } else {
-    return (
-      <div className="no-auth-comment-view col-xs-12 col-md-8 offset-md-2">
-        <p>
-          <Link to="/login">Sign in</Link>
+      );
+    } else {
+      return (
+        <div className="commentView__noAuth">
+          <Link className="commentView__noAuth__signIn" to="/login">
+            Sign in
+          </Link>
           &nbsp;or&nbsp;
-          <Link to="/register">sign up</Link>
+          <Link className="commentView__noAuth__register" to="/register">
+            sign up
+          </Link>
           &nbsp;to add comments on this article.
-        </p>
+        </div>
+      );
+    }
+  };
 
-        <CommentList comments={props.comments} slug={props.slug} currentUser={props.currentUser} />
-      </div>
-    );
-  }
+  return (
+    <div className="commentView col-xs-12 col-md-8 offset-md-2 mb-5">
+      {checkAuth()}
+      <CommentList comments={props.comments} slug={props.slug} currentUser={props.currentUser} />
+    </div>
+  );
 };
 
 export default CommentContainer;

@@ -11,7 +11,7 @@ const TagFilterTab = ({ tag }) => {
   //When the tab is clicked it causes the whole app to re-render and clears the tab
   return (
     <li className="nav-item">
-      <a href="" className="nav-link active">
+      <a href="" className="tagFilter nav-link active">
         <i className="ion-pound" /> {tag}
       </a>
     </li>

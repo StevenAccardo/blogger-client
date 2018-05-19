@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import agent from '../agent';
-import ListErrors from './ListErrors';
+import agent from '../../agent';
+import ListErrors from '../ListErrors';
 
-import { REGISTER, REGISTER_PAGE_UNLOADED } from '../actions/types';
+import { REGISTER, REGISTER_PAGE_UNLOADED } from '../../actions/types';
 
 class Register extends Component {
   constructor(props) {
@@ -40,32 +40,34 @@ class Register extends Component {
 
   render() {
     return (
-      <div className="auth-page">
-        <div className="container page">
+      <div className="authPage">
+        <div className="container">
           <div className="row">
             <div className="col-md-6 offset-md-3 col-xs-12">
               <h1 className="text-xs-center">Sign Up</h1>
               <p className="text-xs-center">
-                <Link to="/login">Have an account?</Link>
+                <Link className="otherAuthLink" to="/login">
+                  Have an account?
+                </Link>
               </p>
 
               <ListErrors errors={this.props.errors} />
-              <form onSubmit={this.submitForm(this.state)}>
+              <form className="authForm" onSubmit={this.submitForm(this.state)}>
                 <fieldset>
                   <fieldset className="form-group">
-                    <input className="form-control form-control-lg" type="text" placeholder="Username" value={this.state.username} onChange={this.changeUsername} />
+                    <input className="authForm__input form-control form-control-lg" type="text" placeholder="Username" value={this.state.username} onChange={this.changeUsername} />
                   </fieldset>
 
                   <fieldset className="form-group">
-                    <input className="form-control form-control-lg" type="email" placeholder="Email" value={this.state.email} onChange={this.changeEmail} />
+                    <input className="authForm__input form-control form-control-lg" type="email" placeholder="Email" value={this.state.email} onChange={this.changeEmail} />
                   </fieldset>
 
                   <fieldset className="form-group">
-                    <input className="form-control form-control-lg" type="password" placeholder="Password" value={this.state.password} onChange={this.changePassword} />
+                    <input className="authForm__input form-control form-control-lg" type="password" placeholder="Password" value={this.state.password} onChange={this.changePassword} />
                   </fieldset>
 
                   {/* The disabled attribute will stop the user from being able to submit the form while the login flow is happening. */}
-                  <button className="btn btn-lg pull-xs-right" type="submit" disabled={this.props.inProgess}>
+                  <button className="authPage__button btn btn-lg" type="submit" disabled={this.props.inProgess}>
                     Sign Up
                   </button>
                 </fieldset>

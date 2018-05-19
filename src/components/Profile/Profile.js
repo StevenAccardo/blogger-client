@@ -34,7 +34,7 @@ class Profile extends Component {
   //This function was made seperate, so that an inheriting class can overwrite it.
   renderTabs() {
     return (
-      <ul className="nav nav-pills outline-active">
+      <ul className="nav nav-pills">
         <li className="nav-item">
           <Link className="nav-link active" to={`/@${this.props.profile.username}`}>
             My Articles
@@ -59,14 +59,14 @@ class Profile extends Component {
     }
 
     return (
-      <div className="profile-page">
-        <div className="user-info">
+      <div className="profilePage">
+        <div className="profilePage__userInfo">
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-md-10 offset-md-1">
-                <img src={profile.image} className="user-img" alt="" />
-                <h4>{profile.username}</h4>
-                <p>{profile.bio}</p>
+                <img src={profile.image} className="profilePage__userInfo__avatar" alt="" />
+                <h4 className="profilePage__userInfo__username">{profile.username}</h4>
+                <p className="profilePage__userInfo__bio">{profile.bio}</p>
                 {/* Determines if the user should see edit options, or not. */}
                 <EditProfileSettings currentUser={currentUser} profile={profile} />
                 {/* Determines if the follow or unfollow button should be rendered. */}
@@ -75,12 +75,10 @@ class Profile extends Component {
             </div>
           </div>
         </div>
-
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-md-10 offset-md-1">
               <div className="articles-toggle">{this.renderTabs()}</div>
-
               <ArticleList articles={this.props.articles} articlesCount={this.props.articlesCount} currentPage={this.props.currentPage} onSetPage={this.onSetPage} />
             </div>
           </div>

@@ -7,8 +7,8 @@ const EditProfileSettings = ({ currentUser, profile }) => {
   //Checks to see if the profile belongs to the logged in user
   if (currentUser && profile.username === currentUser.username) {
     return (
-      <Link to="/settings" className="edit-profile-button btn btn-sm btn-outline">
-        <i className="ion-gear-a" /> Edit Profile Settings
+      <Link to="/settings" className="profilePage__userInfo__editButton btn btn-sm btn-outline">
+        <i className="editButton__icon ion-gear-a" /> Edit Profile Settings
       </Link>
     );
   }

@@ -1,0 +1,25 @@
+.authForm__input,
+.authForm__input::placeholder,
+.authForm__input:focus {
+  color: $red-orange;
+}
+
+.otherAuthLink {
+  color: $light-orange;
+}
+
+.otherAuthLink:hover {
+  color: $red-orange;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+
+.authPage__button {
+  color: $white;
+  background-color: $light-orange;
+}
+
+.authPage__button:hover {
+  color: $light-orange;
+  background-color: $white;
+}

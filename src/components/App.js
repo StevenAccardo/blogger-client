@@ -8,11 +8,11 @@ import Article from './Article';
 import Editor from './Editor';
 import Header from './Header/Header';
 import Home from './Home';
-import Login from './Login';
+import Login from './Auth/Login';
 import Profile from './Profile/Profile';
 import ProfileFavorites from './Profile/ProfileFavorites';
-import Register from './Register';
-import Settings from './Settings';
+import Register from './Auth/Register';
+import Settings from './Settings/Settings';
 import agent from '../agent';
 import { APP_LOAD, REDIRECT } from '../actions/types';
 

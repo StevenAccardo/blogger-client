@@ -28,14 +28,14 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home-page">
+      <div className="homePage">
         <Banner token={this.props.token} />
-        <div className="container page">
+        <div className="container">
           <div className="row">
             <MainView />
             <div className="col-md-3">
               <div className="sidebar">
-                <p>Popular Tags</p>
+                <p className="sidebar__title text-center">Popular Tags</p>
                 <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />
               </div>
             </div>

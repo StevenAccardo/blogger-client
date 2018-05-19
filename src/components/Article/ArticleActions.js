@@ -16,12 +16,12 @@ const ArticleActions = ({ article, onClickDelete, canModify }) => {
   //If the user authored the article, then the edit and delete buttons will be displayed.
   if (canModify) {
     return (
-      <span>
-        <Link to={`/editor/${article.slug}`} className="edit-button btn btn-outline btn-sm">
+      <span className="articleActions">
+        <Link to={`/editor/${article.slug}`} className="articleActions__button--edit btn btn-outline btn-sm">
           <i className="ion-edit" /> Edit Article
         </Link>
 
-        <button className="delete-button btn btn-outline btn-sm ml-2" onClick={del}>
+        <button className="articleActions__button--delete btn btn-outline btn-sm ml-2" onClick={del}>
           <i className="ion-trash-a" /> Delete Article
         </button>
       </span>

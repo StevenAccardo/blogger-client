@@ -50,29 +50,29 @@ class SettingsForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitForm}>
+      <form className="settingsForm" onSubmit={this.submitForm}>
         <fieldset>
           <fieldset className="form-group">
-            <input className="form-control" type="text" placeholder="URL of profile picture" value={this.state.image} onChange={this.updateState('image')} />
+            <input className="form-control settingsForm__input" type="text" placeholder="URL of profile picture" value={this.state.image} onChange={this.updateState('image')} />
           </fieldset>
 
           <fieldset className="form-group">
-            <input className="form-control form-control-lg" type="text" placeholder="Username" value={this.state.username} onChange={this.updateState('username')} />
+            <input className="form-control form-control-lg settingsForm__input" type="text" placeholder="Username" value={this.state.username} onChange={this.updateState('username')} />
           </fieldset>
 
           <fieldset className="form-group">
-            <textarea className="form-control form-control-lg" rows="8" placeholder="Short bio about you" value={this.state.bio} onChange={this.updateState('bio')} />
+            <textarea className="form-control form-control-lg settingsForm__textarea" rows="8" placeholder="Short bio about you" value={this.state.bio} onChange={this.updateState('bio')} />
           </fieldset>
 
           <fieldset className="form-group">
-            <input className="form-control form-control-lg" type="email" placeholder="Email" value={this.state.email} onChange={this.updateState('email')} />
+            <input className="form-control form-control-lg settingsForm__input" type="email" placeholder="Email" value={this.state.email} onChange={this.updateState('email')} />
           </fieldset>
 
           <fieldset className="form-group">
-            <input className="form-control form-control-lg" type="password" placeholder="New Password" value={this.state.password} onChange={this.updateState('password')} />
+            <input className="form-control form-control-lg settingsForm__input" type="password" placeholder="New Password" value={this.state.password} onChange={this.updateState('password')} />
           </fieldset>
 
-          <button className="settings-button btn btn-lg pull-xs-right" type="submit" disabled={this.state.inProgress}>
+          <button className="settingsForm__button btn btn-lg" type="submit" disabled={this.state.inProgress}>
             Update Settings
           </button>
         </fieldset>

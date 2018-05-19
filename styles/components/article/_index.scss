@@ -1,0 +1,36 @@
+@import '_banner';
+
+//Start article content
+
+.article__content {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.article__content__tagList {
+  padding-left: 0;
+  display: inline-block;
+  list-style: none;
+}
+
+// End article content
+
+//Start article actions
+
+.articleActions {
+  text-align: center;
+  margin: 1.5rem 0 3rem;
+}
+
+//End article actions
+
+@import '_comments';
+
+@media (max-width: 767px) {
+  .article__content {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 1rem;
+  }
+}

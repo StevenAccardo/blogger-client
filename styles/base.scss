@@ -1,0 +1,17 @@
+/* ########################## main style start ########################################*/
+
+//boostrap.scss
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import '_variables';
+@import '_constants';
+
+@import 'components/_header';
+@import 'components/_home';
+@import 'components/article/_index';
+@import 'components/_settings';
+@import 'components/_editor';
+@import 'components/_profile';
+@import 'components/_articlePreview';
+@import 'components/_pagination';
+@import 'components/_auth';

@@ -23,7 +23,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <Navbar expand="md">
+      <Navbar dark expand="md">
         <NavbarBrand tag={RRNavLink} to={'/'}>
           Blogger
         </NavbarBrand>

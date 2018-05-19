@@ -1,0 +1,115 @@
+.articlePreview {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+}
+
+.articlePreview__articleMeta {
+  margin: 0 0 1rem;
+}
+
+.articlePreview__articleMeta__avatar {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+  border-radius: 30px;
+}
+
+.articlePreview__articleMeta__info {
+  margin: 0 1.5rem 0 0.3rem;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1rem;
+}
+
+.articlePreview__articleMeta__info__author {
+  display: block;
+  font-weight: 500 !important;
+  color: $white;
+}
+
+.articlePreview__articleMeta__info__author:hover {
+  color: $light-orange;
+  text-decoration: none;
+}
+
+.articlePreview__articleMeta__info__date {
+  font-size: 0.8rem;
+  display: block;
+}
+
+.articlePreview__articleLink {
+  text-decoration: none;
+}
+
+.articlePreview__articleLink__title {
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 0.3rem;
+  color: $white;
+}
+
+.articlePreview__articleLink__description {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: $white;
+  text-decoration: none;
+}
+
+.articlePreview__articleLink__more {
+  max-width: 30%;
+  font-size: 0.8rem;
+  font-weight: 300;
+  vertical-align: middle;
+  color: $white;
+  text-decoration: none;
+}
+
+.articlePreview__articleLink:hover {
+  transition: 0.5s all;
+  text-decoration: none;
+}
+
+.articlePreview__articleLink__title:hover,
+.articlePreview__articleLink__description:hover,
+.articlePreview__articleLink__more:hover {
+  transition: 0.5s all;
+  color: $light-orange;
+  text-decoration: none;
+}
+
+.articlePreview__tagList {
+  float: right;
+  max-width: 50%;
+  vertical-align: top;
+  padding-left: 0 !important;
+  display: inline-block;
+  list-style: none !important;
+}
+
+.favorited {
+  background-color: $light-orange;
+  color: $white;
+  border-color: $red-orange;
+}
+
+.favorited:hover:enabled {
+  transition: 0.5s all;
+  border-color: $red-orange;
+  color: $red-orange;
+  background-color: $white;
+}
+
+.not-favorited {
+  border-color: $red-orange;
+  color: $red-orange;
+}
+
+.not-favorited:hover:enabled {
+  transition: 0.5s all;
+  background-color: $light-orange;
+  color: $white;
+}

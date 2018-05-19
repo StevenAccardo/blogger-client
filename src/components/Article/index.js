@@ -32,24 +32,23 @@ class Article extends Component {
     const canModify = this.props.currentUser && this.props.currentUser.username === this.props.article.author.username;
 
     return (
-      <div className="article-page">
+      <div className="articlePage">
         {/* Creates Banner */}
-        <div className="banner">
+        <div className="articlePage__banner">
           <div className="container">
-            <h1>{this.props.article.title}</h1>
-            {/* This 'ArticleMeta' component will contain details about the article's author as well as any actions the user can take on the article, like editting or deleting. */}
+            <h1 className="articlePage__banner__h1">{this.props.article.title}</h1>
             <ArticleMeta article={this.props.article} canModify={canModify} />
           </div>
         </div>
 
-        <div className="container page">
-          <div className="row article-content">
+        <div className="article container">
+          <div className="row article__content">
             <div className="col-xs-12">
               <div dangerouslySetInnerHTML={markup} />
-              <ul className="tag-list">
+              <ul className="article__content__tagList">
                 {this.props.article.tagList.map(tag => {
                   return (
-                    <li className="tag-default tag-pill tag-outline" key={tag}>
+                    <li className="tag tag--outline" key={tag}>
                       {tag}
                     </li>
                   );
@@ -60,8 +59,7 @@ class Article extends Component {
 
           <hr />
 
-          <div className="article-actions" />
-
+          <div className="articleActions" />
           <div className="row">
             <CommentContainer comments={this.props.comments || []} errors={this.props.commentErrors} slug={this.props.match.params.id} currentUser={this.props.currentUser} />
           </div>

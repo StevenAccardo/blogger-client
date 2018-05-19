@@ -1,0 +1,47 @@
+.settingsPage__title {
+  text-align: center;
+}
+
+.settingsForm__input,
+.settingsForm__textarea,
+.settingsForm__input::placeholder,
+.settingsForm__textarea::placeholder,
+.settingsForm__input:focus,
+.settingsForm__textarea:focus {
+  color: $red-orange;
+}
+
+.settingsForm__button {
+  color: $white;
+  background-color: $light-orange;
+}
+
+.settingsForm__button:hover {
+  transition: 0.5s all;
+  color: $light-orange;
+  background-color: $white;
+}
+
+.settingsPage__logoutButton {
+  background-color: transparent;
+  color: $white;
+  border-color: $white;
+}
+.settingsPage__logoutButton:hover {
+  transition: 0.5s all;
+  background-color: $white;
+  color: $light-orange;
+  border-color: $light-orange;
+}
+
+@media (max-width: 767px) {
+  .settingsPage {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .settingsPage {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,111 @@
+.articlePage__banner {
+  padding: 2rem 0;
+  background-color: $red-orange;
+}
+
+.articlePage__banner__h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.articlePage__banner__articleMeta {
+  display: block;
+  position: relative;
+  font-weight: 300;
+}
+
+.articlePage__banner__articleMeta__avatar {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  @include border-radius(50%);
+}
+
+.articlePage__banner__articleMeta__info {
+  margin: 0 1.5rem 0 0.3rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.articlePage__banner__articleMeta_info__author {
+  display: block;
+  color: $white;
+}
+
+.articlePage__banner__articleMeta_info__author:hover {
+  color: $light-orange;
+  text-decoration: none;
+}
+
+.articlePage__banner__articleMeta__info__date {
+  display: block;
+}
+
+.articleActions {
+  text-align: center;
+  margin: 1.5rem 0 3rem;
+}
+
+.articleActions__button--edit,
+.articleActions__button--delete {
+  color: $white;
+  border-color: $white;
+  background-color: transparent;
+}
+
+.articleActions__button--edit:hover,
+.articleActions__button--delete:hover {
+  transition: 0.5s all;
+  color: $light-teal;
+  border-color: $light-teal;
+  background-color: $white;
+}
+
+@media (max-width: 767px) and (min-width: 341px) {
+  .articlePage__banner {
+    padding: 1rem 0;
+    background-color: $red-orange;
+  }
+
+  .articlePage__banner__h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .articlePage__banner__articleMeta__avatar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .articlePage__banner__articleMeta_info__author {
+    font-size: 0.8rem;
+  }
+
+  .articlePage__banner__articleMeta__info__date {
+    font-size: 0.8rem;
+  }
+
+  .articleActions__button--edit,
+  .articleActions__button--delete {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .articlePage__banner__articleMeta_info__author {
+    font-size: 0.4rem;
+  }
+
+  .articlePage__banner__articleMeta__info__date {
+    font-size: 0.4rem;
+  }
+  .articleActions__button--edit,
+  .articleActions__button--delete {
+    font-size: 8px;
+    padding: 4px;
+  }
+}
